@@ -2,15 +2,30 @@
 <html>
 
 <head>
-    <title>Application Experiment</title>
+    <title>Excelsior Browser</title>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://axowastaken.github.io/HTML-Application/styles.css">
+    <link rel="icon" href="favicon.png">
 </head>
 
 <body class="bgfx">
-    <h1 class="application-title">Application</h1>
-    <p class="textfx">
-        To sum up this file, it is an application experiment. A rather interesting concept I've thought of actually.
-        Its one file with everything else it relies on stored on GitHub pages.
-    </p>
+    <h1 class="application-title">Excelsior Browser</h1>
+    <input id="urlinput" type="text" placeholder="Enter a URL...">
+    <iframe id="display" src="-" style="border:none;" margin-left="0px" margin-right="0px"></iframe>
 </body>
+
+<script>
+    alert("Welcome to Exelsior Browser, it is powered by HTML and gets all of its dependencies from GitHub Pages.")
+</script>
+
+<script>
+document.getElementById("urlInput").addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+        const url = e.target.value;
+        document.getElementById("viewer").src = url;
+    }
+});
+</script>
+
+
 </html>
