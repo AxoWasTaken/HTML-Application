@@ -13,7 +13,7 @@
         <h1 class="application-title">Excelsior Browser</h1>
         <input id="urlinput" type="text" placeholder="Enter a URL..." style="width:1470px;height:auto;">
     </div>
-    <iframe id="display" src="-" style="border:none;" margin-left="0px" margin-right="0px" width="1470px" height="520px"></iframe>
+    <iframe id="display" src="about:blank" style="border:none;" margin-left="0px" margin-right="0px" width="1470px" height="520px"></iframe>
     <!-- Not going to lie, I don't think this will work but lets see :P -->
 </body>
 
@@ -25,7 +25,7 @@
 document.getElementById("urlinput").addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
         const url = e.target.value;
-        document.getElementById("viewer").src = url;
+        document.getElementById("display").src = url;
     }
 });
 </script>
