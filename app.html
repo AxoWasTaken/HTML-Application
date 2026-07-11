@@ -10,8 +10,9 @@
 
 <body class="bgfx">
     <h1 class="application-title">Excelsior Browser</h1>
-    <input id="urlinput" type="text" placeholder="Enter a URL...">
-    <iframe id="display" src="-" style="border:none;" margin-left="0px" margin-right="0px"></iframe>
+    <input id="urlinput" type="text" placeholder="Enter a URL..." >
+    <iframe id="display" src="-" style="border:none;" margin-left="0px" margin-right="0px" width="auto" height="auto"></iframe>
+    <!-- Not going to lie, I don't think this will work but lets see :P -->
 </body>
 
 <script>
@@ -19,13 +20,12 @@
 </script>
 
 <script>
-document.getElementById("urlInput").addEventListener("keydown", function(e) {
+document.getElementById("urlinput").addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
         const url = e.target.value;
         document.getElementById("viewer").src = url;
     }
 });
 </script>
-
 
 </html>
